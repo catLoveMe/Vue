@@ -1,0 +1,46 @@
+
+@font-face{
+  font-family:"iconfont";
+  src: url('../../assets/icon/iconfont.ttf');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before { content: "\e6a0"; }
+
+.icon-map:before { content: "\e606"; }
+
+.icon-twitter:before { content: "\ec9c"; }
+
+.icon-search:before { content: "\e613"; }
+
+.icon-heart:before { content: "\e751"; }
+
+.icon-cart:before { content: "\e603"; }
+
+.icon-close:before { content: "\e612"; }
+
+.icon-19:before { content: "\e61d"; }
+
+.icon-facebook:before { content: "\e676"; }
+
+.icon-v:before { content: "\e62b"; }
+
+.icon-tel:before { content: "\e644"; }
+
+.icon-list:before { content: "\e638"; }
+
+.icon-youtube:before { content: "\e600"; }
+
+.icon-arrow-right:before { content: "\e632"; }
+
+.icon-Global:before { content: "\e66f"; }
+
+.icon-arrow-left:before { content: "\e660"; }
+

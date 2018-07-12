@@ -12,7 +12,7 @@ const getters = {
   shopPro : state=> state.shop_list ,
   cartProducts : state => state.added,
   totalPrice:(state,getters)=>{
-    console.log(state.added,"cartProducts");
+    console.log(state.added,"cartProducts");//购物车的数据
     let totalprice = 0;
     getters.cartProducts.forEach(item=>{
       totalprice += item.pro_price * item.sc_amount
@@ -28,7 +28,8 @@ const getters = {
   }
 };
 
-
+//Action 提交的是 mutation，而不是直接变更状态。
+// Action 可以包含任意异步操作。
 const actions = {
   addToCart(ctx,product){
     ctx.commit("add",product)
@@ -44,7 +45,7 @@ const actions = {
     ctx.commit('addmony',product)
   }
 };
-
+//更改Vuex 里面的store里面数据的唯一方法，就是提交muations （即muations是更改store数据的地方），只能同步
 const mutations = {
   add(state,product){
     let record = state.added.find(selfitem=>selfitem.pro_id == product.pro_id);
@@ -70,7 +71,7 @@ const mutations = {
       state.count = 1;
     }
   },
-  clearAll(state){
+  clearAll(state){//清空购物车，将购物车里的数据置为0
     state.added = []
   },
   del(state,product){

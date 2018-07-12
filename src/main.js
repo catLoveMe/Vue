@@ -1,5 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+//文件配置 axios element-ui先npm install再引入
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -20,6 +21,7 @@ Vue.prototype.$host = "http://172.16.8.22:8868/";
 
 
 /* eslint-disable no-new */
+//注册到vue实例上,才能使用
 new Vue({
   el: '#app',
   router,

@@ -8,7 +8,6 @@ const getters = {
 
 const actions = {
   addOrder(ctx,order){
-
     ctx.commit("addorder",order)
   }
 };

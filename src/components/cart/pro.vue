@@ -1,3 +1,5 @@
+<script src="../../store/modules/cart.js"></script>
+<script src="../../store/index.js"></script>
 <template>
   <div>
     <h1>Product组件- 商品信息</h1>

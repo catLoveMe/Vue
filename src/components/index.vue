@@ -180,6 +180,7 @@
     </div>
     <footerBlock></footerBlock>
     <div class="navBlock" >
+      <!--ref 转化为属性 使用refs.转化的属性名 获取数据-->
       <navigation ref="navigationBlock"></navigation>
     </div>
   </div>

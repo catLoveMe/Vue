@@ -50,7 +50,7 @@
   import teaBtn from '../common/teaBtn.vue'
   import cartCom from './cartmin.vue'
   import shopPro from '../common/shopPro.vue'
-  import {mapGetters,mapActions} from 'vuex'
+  import {mapGetters,mapActions} from 'vuex' //从vuex中引入mapGetters 等
 
 
   export default{
@@ -65,10 +65,10 @@
       teaBtn: teaBtn,
       shopPro: shopPro
     },
-    methods: {
-      ...mapActions(['clearAllCart', "totalNum2"])
+    methods: {//定义方法
+      ...mapActions(['clearAllCart', "totalNum2"])//action方法中定义了commit到muations的标识
     },
-    computed: {
+    computed: {//依赖属性
       ...mapGetters(['totalNum', 'totalPrice'])
     }
   }

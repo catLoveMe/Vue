@@ -17,7 +17,7 @@
   import about from "./components/about/about.vue"
   export default {
     name: 'app',
-    components:{
+    components:{//组件注册了才能使用
       navigation:navigation,
       titleShow:titleShow,
       teaAdopt:teaAdopt,

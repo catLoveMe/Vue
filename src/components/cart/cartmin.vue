@@ -89,7 +89,9 @@
             type: 'info ',
             message: '拜拜啦主人!'
           });
-          that.$store.dispatch('delProduct',val);
+//          一个 store.dispatch 在不同模块中可以触发多个 action 函数。
+// 在这种情况下，只有当所有触发函数完成后，返回的 Promise 才会执行。
+          that.$store.dispatch('delProduct',val);//store直接触发到action使用dispatch
         }).catch(() => {
           this.$message({
             type: 'success',
@@ -103,6 +105,8 @@
        })
     },
     computed:{
+        //cartProducts的数据再getters中进行转化，转化为state.add数据
+      //
       ...mapGetters(['cartProducts','addToCart'])
     },
 

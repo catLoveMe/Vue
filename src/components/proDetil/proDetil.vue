@@ -4,6 +4,7 @@
 <template>
   <div>
     <navigation></navigation>
+	<!--vue的动态绑定使用：eg:(:src) ，angular的动态绑定[] eg:[src] ，react-->
     <titleBlock mainTitle="茶叶推广" subTitle="Tea Extension" :breadArg="breadArg"></titleBlock>
     <div class="promoteDBlock" style="margin-top: 5%">
       <div class="leftCont">
@@ -92,7 +93,7 @@
         }
       }
     },
-    created(){
+    created(){//组件被创建但数据为准备好
       this.id = this.$route.query.id;
       this.$axios.post("/api/getAllDataMuseum.do", {id: this.$route.query.id}) // {params:{以对象的形式传参}}
         .then(resp => {

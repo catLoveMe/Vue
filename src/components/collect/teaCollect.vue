@@ -36,8 +36,7 @@
         })
     },
     methods:{
-      reload(){
-        console.log("1111111111");
+      reload(){//再次获取data
         this.$axios.get('/api/collectionCheck.do')
           .then(resp => {
             console.log(resp,"121212121");

@@ -239,30 +239,22 @@
       });
     },
     mounted(){
-      window.addEventListener('scroll',this.handleScroll);
+      window.addEventListener('scroll',this.handleScroll);//滚动事件
       this.$axios.post("/api/getAllDataMuseum.do").then(resp=>{
-        console.log(resp);
         this.cultrualArg =[].concat(resp.data.data);
-        console.log("~~~~~~")
-        console.log(this.cultrualArg);
-        console.log(this.cultrualArg);
-        console.log("数据返回")
       });
     },
     destroyed(){
-      window.removeEventListener('scroll',this.handleScroll);
-      console.log("取消滚动事件");
+      window.removeEventListener('scroll',this.handleScroll);//取消滚动事件
     },
     methods:{
       linkTo(link){
         this.$router.push(link);
       },
-      exit(){
-        console.log("退出登录");
+      exit(){//退出登录
         this.loginStatus = 0 ;
         window.sessionStorage.loginStatus = 0;
         window.location.reload();
-        console.log(window.sessionStorage.loginStatus);
       },
       showModal2(option){
         if(option === 0){

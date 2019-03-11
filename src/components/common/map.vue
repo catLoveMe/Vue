@@ -94,7 +94,7 @@
          var marker = new BMap.Marker(point) // 创建标注，为要查询的地方对应的经纬度
          map.addOverlay(marker)
          });
-         localSearch.search('四川省成都市国信安')
+         localSearch.search('四川省成都市')
       }
     }
   }

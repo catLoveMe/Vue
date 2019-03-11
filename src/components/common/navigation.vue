@@ -94,7 +94,6 @@
         $(".slider ul").fadeOut();
       },
       showModal(){
-          console.log(this.loginStatus);
           if(this.loginStatus === 1){
             this.$router.push({path:'/person'});
             return;

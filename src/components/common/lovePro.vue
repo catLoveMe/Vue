@@ -27,7 +27,6 @@
     methods:{
       ...mapActions(['addToCart']),
       moveCollect(item){
-          console.log(item,"item0")
         var that = this;
         this.$axios.get('/api/cancelCollec.do',{params:{proName:item.pro_id}})
           .then(function (resp) {
